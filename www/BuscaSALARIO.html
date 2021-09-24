@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  
+  <meta name="format-detection" content="telephone=no">
+  <meta name="msapplication-tap-highlight" content="no">
+  <meta name="viewport" content="initial-scale=1, width=device-width, viewport-fit=cover">
+  <meta name="color-scheme" content="light dark">
+  <link rel="stylesheet" href="css/BuscaSalario.css">
+  
+  <title>Média Salarial - Clarissa Reis</title>
+<body>
+
+  <h1>Média Salarial </h1>
+  <table id="table">
+    <tr>
+      <th>Ano</th>
+      <th>População Total</th>
+      <th>Salário Médio</th>      
+      <th>CIP2</th>
+    </tr>
+  </table>
+
+<script >
+        (function()
+    {
+      var labels = []
+          values = [];
+
+      function addRows (data){
+        const table = document.getElementById('table');
+        let i = 0;
+
+        for (const item of data) { 
+          labels[i] = item.Year
+          values[i] = parseFloat(item["Average Wage Appx MOE"]);   
+          
+          labels[i] = item.Year
+          values[i] = parseFloat(item["Total Population"]);  
+
+          let row = document.createElement('tr');
+          row.innerHTML += '<td>'+item.Year+'</td>';
+          row.innerHTML += '<td>'+item["Total Population"]+'</td>';
+          row.innerHTML += '<td>'+parseFloat(item["Average Wage Appx MOE"]).toLocaleString('pt-BR')+'</td>';     
+          row.innerHTML += '<td>'+item["CIP2"]+'</td>';
+
+          table.appendChild(row);
+          i++;
+          if(i == 15)
+            return;
+        }
+
+        makeChart ();
+      }
+
+      
+      fetch('https://ruby.datausa.io/api/data?CIP2=45&measure=ygcpop RCA,Total Population,Total Population MOE Appx,Average Wage,Average Wage Appx MOE,Record Count&drilldowns=PUMA&Record Count>=5&Workforce Status=true')
+        .then(function(res){
+            return res.ok ? res.json() : Promise.reject(res);
+        }).then(function (data) {
+          addRows(data.data);
+        }).catch(function (err) {
+          console.warn('Erro.', err);
+        });
+
+    })();
+  </script>
+
+<button class="buttonMenu" onclick="window.location.href='BuscaCEP.html'" style="left: 69.9%; "> <b>BUSCAR CEP</b> </button>
+<button class="buttonMenu" onclick="window.location.href='BuscaCONSELHO.html'" style="left: 49.8%;"> <b>BUSCAR CONSELHO</b> </button>
+<button class="buttonSelecionado" onclick="window.location.href='BuscaSALARIO.html'" style="left: 30%;"> <b>BUSCAR SALARIO</b> </button>
+<button class="buttonMenu" onclick="window.location.href='BuscaLIVRO.html'" style="left: 10%;"> <b>BUSCAR LIVRO</b> </button>
+
+
+</body>
+</html>

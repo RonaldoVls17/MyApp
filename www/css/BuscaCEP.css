@@ -1,0 +1,82 @@
+@charset "UTF-8";
+/*!
+ * Bootstrap v5.0.2 (https://getbootstrap.com/)
+ * Copyright 2011-2021 The Bootstrap Authors
+ * Copyright 2011-2021 Twitter, Inc.
+ * Licensed under MIT (https://github.com/twbs/bootstrap/blob/main/LICENSE)
+ */
+ body {
+  background: -webkit-gradient(linear, left top, left bottom, from(#74EEFA), to(#3B51FF)) fixed;
+
+}
+
+button{
+ position: fixed;
+ left: 42%;
+ width: 25em;
+ height: 3em;
+ background-color: rgba(255, 255, 255, 0.450);
+ color: rgb(255, 255, 255);
+ border-radius: 16px;
+ border-color: rgb(251, 255, 28);
+ border-style: solid;
+}
+
+.buttonMenu{
+   position: fixed;
+   width: 25em;
+   top: 93%;
+   height: 3em;
+   background-color: rgba(255, 255, 255, 0.450);
+   color: rgb(255, 255, 255);
+   border-radius: 16px;
+   border-color: rgb(251, 255, 28);
+   border-style: solid;
+  }
+
+  .buttonSelecionado{
+   position: fixed;
+   width: 25em;
+   top: 93%;
+   height: 3em;
+   background-color: rgba(48, 48, 48, 0.45);
+   color: rgb(255, 255, 255);
+   border-radius: 16px;
+   border-color: rgb(251, 255, 28);
+   border-style: solid;
+  }
+
+img{
+    position: fixed;     
+ }
+
+input{
+    position: fixed;
+    left: 42%;
+    width: 25em;
+    height: 3em;
+    background-color: rgba(255, 255, 255, 0.450);
+    color: rgb(255, 255, 255);
+    border-radius: 16px;
+    border-color:#55D485;
+    border-style: solid;
+   }
+
+   label{
+    position: fixed;
+    left: 44%;
+    width: 15em;
+    height: 15px;
+    background-color: rgba(255, 255, 255, 0);
+    color: rgb(0, 0, 0);
+    border-radius: 8px;
+    border-color: rgba(251, 255, 28, 0);
+    border-style: solid;
+    text-align: center;
+   }
+
+img{
+   position: fixed;     
+}
+
+/*# sourceMappingURL=bootstrap.css.map */

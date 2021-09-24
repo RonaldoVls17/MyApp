@@ -1,0 +1,29 @@
+@charset "UTF-8";
+/*!
+ * Bootstrap v5.0.2 (https://getbootstrap.com/)
+ * Copyright 2011-2021 The Bootstrap Authors
+ * Copyright 2011-2021 Twitter, Inc.
+ * Licensed under MIT (https://github.com/twbs/bootstrap/blob/main/LICENSE)
+ */
+ body {
+  background: -webkit-gradient(linear, left top, left bottom, from(#7C41FF), to(#D776F2)) fixed;
+
+}
+
+button{
+ position: fixed;
+ width: 25em;
+ top: 93%;
+ height: 3em;
+ background-color: rgba(255, 255, 255, 0.450);
+ color: rgb(255, 255, 255);
+ border-radius: 16px;
+ border-color: rgb(251, 255, 28);
+ border-style: solid;
+}
+
+img{
+   position: fixed;     
+}
+
+/*# sourceMappingURL=bootstrap.css.map */
